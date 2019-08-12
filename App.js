@@ -5,6 +5,7 @@ import CourseList from './screens/CourseList';
 import Requirements from './screens/Requirements';
 import Plan from './screens/Plan';
 import Schedule from './screens/Schedule';
+import CourseInformation from './screens/CourseInformation';
 // export default class App extends React.Component {
   
   const MainNavigator = createStackNavigator({
@@ -13,6 +14,7 @@ import Schedule from './screens/Schedule';
     Requirements: {screen: Requirements},
     Plan: {screen: Plan},
     Schedule: {screen: Schedule},
+    CourseInformation: {screen: CourseInformation},
   });
 
   const App = createAppContainer(MainNavigator);

@@ -25,8 +25,10 @@ export default class CourseList extends Component {
     _renderItem = ({item}) => (
       <View style={styles.container}>
         <ClassItem
-          name={item.class_name}
-          professor={item.class_number}
+          navigation={this.props.navigation}
+          class_title={item.class_title}
+          class_number={item.class_number}
+          professor={item.professor}
         />
       </View>
     );
@@ -34,12 +36,14 @@ export default class CourseList extends Component {
     render() {    
       const data = [
         {
-          class_name: 'Computer Science I',
+          class_title: 'Computer Science I',
           class_number: 'COSC 240',
+          professor: 'John Snow',
         },
         {
-          class_name: 'Computer Science II',
+          class_title: 'Computer Science II',
           class_number: 'COSC 241',
+          professor: 'Ned Stark',
         }
       ];
       return(
